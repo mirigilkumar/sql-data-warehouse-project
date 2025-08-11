@@ -25,7 +25,7 @@ It is built entirely with **SQL Server** and showcases both **Data Engineering**
 ---
 
 ## 📂 Repository Structure
-
+```
 data-warehouse-project/
 │
 ├── datasets/ # Raw datasets (CSV files)
@@ -46,7 +46,7 @@ data-warehouse-project/
 ├── LICENSE # License information
 └── requirements.txt # Dependencies
 
-
+```
 ---
 
 ## 🚀 Implementation Steps
