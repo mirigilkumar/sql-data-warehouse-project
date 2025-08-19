@@ -85,20 +85,16 @@ data-warehouse-project/
 
 
 ## 🛡️ License
+
+This project is licensed under the [MIT License](LICENSE).
+
+
 ## 👋 About Me
 
 Hi, I’m Mirigil Kumar M.
 I’m a US Healthcare RCM Analyst with 10+ years of experience, skilled in Python, SQL, Pandas, NumPy, Tableau, and Power BI.
 
 I use data to solve problems, build insights, and share my projects here on GitHub.
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/Mirigilkumar)
-
-This project is licensed under the [MIT License](LICENSE).
-
-## 🌟 Author
-
-MirigilKumar
-
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/Mirigilkumar)
 
