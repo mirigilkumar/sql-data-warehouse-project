@@ -79,14 +79,10 @@ data-warehouse-project/
 ├── tests/                              # Test scripts and quality files
 │
 ├── README.md                           # Project overview and instructions
-├── LICENSE                             # License information for the repository
 ```
 
 
 
-## 🛡️ License
-
-This project is licensed under the [MIT License](LICENSE).
 
 
 ## 👋 About Me
