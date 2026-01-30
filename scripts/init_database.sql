@@ -1,54 +1,43 @@
 /*
 =============================================================
-Create DataWarehouse Database and Schemas
+Create Database and Schemas
 =============================================================
 Script Purpose:
-    - Creates a DataWarehouse database for analytics.
-    - Drops and recreates the database if it already exists (DEV/TEST only).
-    - Creates bronze, silver, and gold schemas to support Medallion Architecture.
-
+    This script creates a new database named 'DataWarehouse' after checking if it already exists. 
+    If the database exists, it is dropped and recreated. Additionally, the script sets up three schemas 
+    within the database: 'bronze', 'silver', and 'gold'.
+	
 WARNING:
-    - This script DROPS the entire DataWarehouse database.
-    - All existing data will be permanently deleted.
-    - Use ONLY in development or test environments.
-=============================================================
+    Running this script will drop the entire 'DataWarehouse' database if it exists. 
+    All data in the database will be permanently deleted. Proceed with caution 
+    and ensure you have proper backups before running this script.
 */
 
 USE master;
 GO
 
-BEGIN TRY
-    -- Check if database exists
-    IF EXISTS (SELECT 1 FROM sys.databases WHERE name = 'DataWarehouse')
-    BEGIN
-        ALTER DATABASE DataWarehouse 
-        SET SINGLE_USER WITH ROLLBACK IMMEDIATE;
-
-        DROP DATABASE DataWarehouse;
-    END;
-
-    -- Create DataWarehouse database
-    CREATE DATABASE DataWarehouse;
-END TRY
-BEGIN CATCH
-    PRINT 'Error occurred while creating DataWarehouse database';
-    THROW;
-END CATCH;
+-- Drop and recreate the 'DataWarehouse' database
+IF EXISTS (SELECT 1 FROM sys.databases WHERE name = 'DataWarehouse')
+BEGIN
+    ALTER DATABASE DataWarehouse SET SINGLE_USER WITH ROLLBACK IMMEDIATE;
+    DROP DATABASE DataWarehouse;
+END;
 GO
 
--- Switch to DataWarehouse
+-- Create the 'DataWarehouse' database
+CREATE DATABASE DataWarehouse;
+GO
+
 USE DataWarehouse;
 GO
 
--- Create schemas if not exists
-IF NOT EXISTS (SELECT 1 FROM sys.schemas WHERE name = 'bronze')
-    EXEC('CREATE SCHEMA bronze');
+-- Create Schemas
+CREATE SCHEMA bronze;
 GO
 
-IF NOT EXISTS (SELECT 1 FROM sys.schemas WHERE name = 'silver')
-    EXEC('CREATE SCHEMA silver');
+CREATE SCHEMA silver;
 GO
 
-IF NOT EXISTS (SELECT 1 FROM sys.schemas WHERE name = 'gold')
-    EXEC('CREATE SCHEMA gold');
+CREATE SCHEMA gold;
 GO
+ 
