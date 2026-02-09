@@ -93,7 +93,6 @@ I’m a US Healthcare RCM Analyst with 10+ years of experience, skilled in Pytho
 I use data to solve problems, build insights, and share my projects here on GitHub.
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/Mirigilkumar)
-📧 Email:
 <a href="mailto:mirigilkumar@gmail.com">
   <img src="https://img.shields.io/badge/Gmail-D14836?style=flat&logo=gmail&logoColor=white"/>
 </a>
